@@ -1,4 +1,5 @@
 import {
+  TAcdemicSemesterNameCodeMapper,
   TMonths,
   TSemesterCodes,
   TSemesterNames,
@@ -22,3 +23,9 @@ export const months: TMonths[] = [
 export const semesterNames: TSemesterNames[] = ['Autumn', 'Summer', 'Fall'];
 
 export const semesterCodes: TSemesterCodes[] = ['01', '02', '03'];
+
+export const academicSemesterNameCodeMapper: TAcdemicSemesterNameCodeMapper = {
+  Autumn: '01',
+  Summer: '02',
+  Fall: '03',
+};
