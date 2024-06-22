@@ -73,7 +73,7 @@ export const createStudentValidationSchema = z.object({
     student: z.object({
       name: userNameValidationSchema,
       gender: z.enum(['male', 'female', 'other']),
-      dateOfBirth: z.date().optional(),
+      dateOfBirth: z.string().optional(),
       email: z
         .string()
         .trim()
@@ -97,6 +97,7 @@ export const createStudentValidationSchema = z.object({
         .min(1, { message: 'Permanent Address is required' }),
       guardian: guardianValidationSchema,
       localGuardian: localGuardianValidationSchema,
+      admissionSemester: z.string(),
       profileImg: z.string().trim().optional(),
     }),
   }),
