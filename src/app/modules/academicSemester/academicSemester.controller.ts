@@ -19,7 +19,7 @@ const createAcademicSemester = catchAsync(async (req, res) => {
   });
 });
 
-const getAllAcademicSemesters = catchAsync(async (req, res, next) => {
+const getAllAcademicSemesters = catchAsync(async (req, res) => {
   const result = await AcademicSemesterServices.getAllAcademicSemestersFromDB();
 
   //send response
@@ -31,7 +31,7 @@ const getAllAcademicSemesters = catchAsync(async (req, res, next) => {
   });
 });
 
-const getSingleAcademicSemesters = catchAsync(async (req, res, next) => {
+const getSingleAcademicSemesters = catchAsync(async (req, res) => {
   const { semesterId } = req.params;
   const result =
     await AcademicSemesterServices.getSingleAcademicSemesterFromDB(semesterId);
