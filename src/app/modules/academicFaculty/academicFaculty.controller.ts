@@ -26,7 +26,7 @@ const getAllAcademicFaculties = catchAsync(async (req, res) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Academic Faculties successfully',
+    message: 'Academic Faculties retrieved successfully',
     data: result,
   });
 });
@@ -40,7 +40,7 @@ const getSingleAcademicFaculty = catchAsync(async (req, res) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: '1 Faculty retreived successfully',
+    message: '1 Academic Faculty retreived successfully',
     data: result,
   });
 });
@@ -56,7 +56,7 @@ const updateAcademicFaculty = catchAsync(async (req, res) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Semester updated successfully',
+    message: 'Academic Faculty updated successfully',
     data: result,
   });
 });

@@ -1,19 +1,23 @@
 import { z } from 'zod';
 
 const createAcademicFacultyValidationSchema = z.object({
-  name: z
-    .string({ invalid_type_error: 'Academic Faculty Name must be a string' })
-    .max(20, {
-      message: 'Academic Faculty Name can not be more than 20 characters',
-    }),
+  body: z.object({
+    name: z
+      .string({ invalid_type_error: 'Academic Faculty Name must be a string' })
+      .max(100, {
+        message: 'Academic Faculty Name can not be more than 100 characters',
+      }),
+  }),
 });
 
 const updateAcademicFacultyValidationSchema = z.object({
-  name: z
-    .string({ invalid_type_error: 'Academic Faculty Name must be a string' })
-    .max(20, {
-      message: 'Academic Faculty Name can not be more than 20 characters',
-    }),
+  body: z.object({
+    name: z
+      .string({ invalid_type_error: 'Academic Faculty Name must be a string' })
+      .max(100, {
+        message: 'Academic Faculty Name can not be more than 100 characters',
+      }),
+  }),
 });
 
 export const AcademicFacultyValidation = {
